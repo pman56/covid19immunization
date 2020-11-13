@@ -1,0 +1,1397 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+<title> </title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="landing page, website design" />
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+<script src="moment.js"></script>
+	<script src="livestamp.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+
+var userid_sess_data1 = localStorage.getItem('useridsessdata2');
+if (userid_sess_data1 == null || userid_sess_data1 == undefined) {
+
+  alert('Hello!. You Must Login To Access this App Page');
+window.location='login.html';
+//return false;
+}
+
+
+// check if user has been verified by Security Questsions
+var security_session = localStorage.getItem('securitysession');
+if (security_session == null || security_session == undefined) {
+
+  alert('Hello!. You Must Pass Through Security Questions Verification before accessing this Page');
+window.location='security_defence.html';
+//return false;
+}
+
+
+
+</script>
+
+
+<script>
+$(document).ready(function(){
+
+
+var userid_sess_data = localStorage.getItem('useridsessdata2');
+var fullname_sess_data = localStorage.getItem('fullnamesessdata2');
+var username_sess_data = localStorage.getItem('usernamesessdata2');
+var email_sess_data = localStorage.getItem('emailsessdata2');
+var photo_sess_data = localStorage.getItem('photosessdata2');
+var user_rank_sess_data = localStorage.getItem('userranksessdata2');
+var title_header = localStorage.getItem('titleheader2');
+var title_footer = localStorage.getItem('titlefooter2');
+var appcolor = localStorage.getItem('appcolor2');
+
+//alert(userid_sess_data);
+
+
+
+var rec = "<span>" +
+"<img src=" + photo_sess_data +"  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: orange;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+$('.myd_fullname_sess').html(fullname_sess_data);
+$('.myd_userid_sess').html(userid_sess_data);
+$('.myd_username_sess').html(username_sess_data);
+
+
+//$('#myd_userid_sess_value').val(userid_sess_data).value;
+//$('#myd_userid_sess_id').html(userid_sess_data);
+
+
+$('.myd_title_header').html(title_header);
+$('.myd_title_footer').html(title_footer);
+
+
+});
+
+</script>
+
+
+<style>
+
+
+
+
+
+
+
+/*ensure that category button does not jam about us or product section when on mobile ends here.*/
+
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#8B008B;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #8B008B;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+
+
+/* home starts */
+  
+.home_image {	
+width:100%;
+/*
+height:500px;
+max-height:500px;
+*/
+height:100vh;
+max-height:100vh;
+       
+        
+}
+
+
+
+.creator_imagelogo_data{
+ width:60px;
+ height:60px;
+}
+
+/* make modal appear at center of the page */
+.modal-appear-center {
+margin-top: 25%;
+//width:40%;
+}
+
+
+/* make modal appear at center of the page */
+.modal-appear-center1 {
+margin-top: 15%;
+//width:40%;
+}
+
+
+.modal_head_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+
+.modal_footer_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+/*
+modal_mobile_resize 
+
+@media screen and (max-width: 600px) {
+  .modal_mobile_resize {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+
+*/
+
+
+
+.btn_copyright{
+//background: orange;
+color:orange;
+//padding:2px;
+font-weight:200;
+}
+
+
+.btn_copyright:hover {
+background: black;
+color:pink;
+font-weight:700;
+}
+
+
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color:#8B008B;
+    color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+
+.left_shifting{
+
+width:40%;
+}
+
+@media screen and (max-width: 768px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+}
+
+.modaling_sizing{
+width:59%;
+}
+
+
+@media screen and (max-width: 768px) {
+.modaling_sizing {
+width:99%;
+
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+.modaling_sizing {
+width:99%;
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center; 
+}
+
+
+
+}
+
+.category_post{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+
+.category_post1{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+z-index: -999;
+}
+.category_post1:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+
+.e_search_form{
+width: 38vw;
+height:60px;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:15%;
+color:black;
+font-size:16px;
+background:white;
+
+//transform: skew(-22deg);
+margin-left:-90px;
+
+}
+
+.e_search_form:hover{
+
+border-style: solid; border-width:4px; border-color: #824c4e;
+background: #dddddd;
+color: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .e_search_form{
+
+  width: 100%;
+  padding: 20px;
+margin-left:0px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .e_search_form{
+  width: 100%;
+  padding: 20px 
+margin-left:0px; 
+  }
+}
+
+
+
+
+
+.readmore_btn{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 20%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.readmore_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+</style>
+
+
+
+<script>
+// set post url
+
+url_post_data ="";
+
+</script>
+
+    </head>
+    <body>
+
+ 
+</head>
+<body>
+
+
+
+<style>
+
+.notify_count { color: #FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: green; padding: 2px 6px;font-size:14px; }
+.notify_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:14px; }
+
+</style>
+
+
+
+<!-- start column nav-->
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+
+      <ul class="nav navbar-nav navbar-right">
+
+<li>
+<a>
+<button class="category_post" data-toggle="modal" data-target="#myModal_search_post" 
+title="Search Covid19 Vaccination Centers" >
+<i  style="color:white;font-size:30px;" class="fa fa-search" aria-hidden="true"></i>Search Vaccination<p> Centers</p></button></a>
+
+
+
+</li>
+
+           
+ <li class="navgate_no">
+<a title='Vaccination Map Locations' href="map_vaccination.html" style="color:white;font-size:14px;" ><button class="category_post"><i  style="color:white;font-size:30px;" class="fa fa-map-marker" aria-hidden="true"></i>Vaccination Map<p>Centers</p></button></a>
+
+
+</li>    
+
+
+             
+ <li class="navgate_no">
+<a title='Add Covid19 Vaccination Centers' href="create_post2.html" style="color:white;font-size:14px;" ><button class="category_post"><i  style="color:white;font-size:30px;" class="fa fa-edit" aria-hidden="true"></i>Add Covid19<p>Vaccination Centers</p></button></a>
+
+
+
+
+</li>       
+<li style='display:none' class="navgate_no"><a title='View Dashboard' href="dashboard_welcome2.html" style="color:white;font-size:14px;"><button class="category_post">Dashboard</button></a></li>
+
+
+
+
+
+<!--start post comments  Call-->
+
+
+
+<script>
+
+$(document).ready(function(){
+
+var userid_sess_data = localStorage.getItem('useridsessdata2');
+$("#loader-notify_alert_posts").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+var datasend = {userid_sess_data:userid_sess_data};
+
+//alert(userid_sess_data);
+	
+		$.ajax({
+			
+			type:'POST',
+			url:url_post_data+'notify_alert_posts.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+//alert(msg);
+
+$("#loader-notify_alert_posts").hide();
+$("#result-notify_alert_posts").html(msg);
+//setTimeout(function(){ $('#result-notify_alert_posts').html(''); }, 5000);	
+
+
+			
+	
+}
+			
+		});
+		
+		
+
+});
+
+
+</script>
+
+
+
+
+<li>
+<span style='color:white;' class="dropdown fa fa-bell">
+  <a style="color:white;font-size:14px;cursor:pointer;" title='Posts, Comments' class="btn1 btn-default1 dropdown-toggle"  data-toggle="dropdown">
+  <span class="notify_count"><span id="loader-notify_alert_posts"></span><span id="result-notify_alert_posts"></span></span>
+</a>
+
+<ul class="dropdown-menu" style='width:350px;height: 400px;overflow-y : scroll;'>
+<h4 style='color:blue;'>Posts and  Comments Notification Alerts</h4>
+
+
+<script>
+
+$(document).ready(function(){
+
+
+var userid_sess_data = localStorage.getItem('useridsessdata2');
+var username_sess_data = localStorage.getItem('usernamesessdata2');
+
+var sender_id=userid_sess_data;
+var sender_username=username_sess_data;
+
+
+if(sender_id ==''){
+alert('something is wrong with Senders Id');
+}
+
+
+else{
+
+
+$("#loader-load-notify-post").fadeIn(400).html('<br><div style="color:white;background:#ec5574;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i>&nbsp;Please Wait,Loading Your Notification Alerts...</div>');
+var datasend = {sender_id:sender_id, sender_username:sender_username};
+
+
+	
+		$.ajax({
+			
+			type:'POST',
+			url:url_post_data+'notification_post_load.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+$("#loader-load-notify-post").hide();
+$("#result-load-notify-post").html(msg);
+//setTimeout(function(){ $('#result-load-notify-post(''); }, 5000);				
+
+//location.reload();	
+}
+			
+		});
+		
+		}
+
+
+});
+
+
+
+</script>
+
+
+
+<!-- form START-->
+<div id="loader-load-notify-post"></div>
+<div id="result-load-notify-post"></div>
+
+
+<!--form ENDS-->
+
+<p></p>
+
+</ul></span>
+&nbsp;&nbsp;
+</li>
+
+
+<!--end post comments Call-->
+
+
+
+
+
+
+<li class="navgate">
+
+<span class="dropdown">
+  <a style="color:white;font-size:14px;cursor:pointer;" title='View More Data' class="btn1 btn-default1 dropdown-toggle"  data-toggle="dropdown">
+  <span class='myd_photo_sess'></span>
+
+More<span class="caret"></span></a>
+
+<ul class="dropdown-menu">
+<b style='color:black;'>(<span class='myd_fullname_sess'></span>)</b><br><br>
+<li><a title='My Profile' href="profile_base2.html"><span style='font-size:30px;color:#8B008B;' class='fa fa-user'></span> My Profile/Posts</a></li><p></p>
+<li><a title='Logout' href="logout.html"><span style='font-size:30px;color:#8B008B;' class='fa fa-sign-out'></span> Logout</a></li>
+
+</ul></span>
+
+</li>
+
+
+
+      </ul>
+
+
+
+    </div>
+
+<div style='width:100%;background:#ec5574;padding:2px;border-radius:30%;'>
+<ul>
+
+
+<a title='Covid19 Vaccine Side Effects Reports' href="report.html" style="color:white;font-size:14px;"><button class="category_post1"><i  style="color:white;font-size:10px;" class="fa fa-comments-o" aria-hidden="true"></i>  Report Vaccine Side-Effects</button></a>
+
+<a title='Vaccine Supply vs Demand Statistics' href="statistics.html" style="color:white;font-size:14px;"><button class="category_post1"><i  style="color:white;font-size:10px;" class="fa fa-bar-chart" aria-hidden="true"></i>  Vaccine Statistics</button></a>
+
+<a title='Vaccination Appointment Calendar' href="calendar.html" style="color:white;font-size:14px;"><button class="category_post1"><i  style="color:white;font-size:10px;" class="fa fa-calendar" aria-hidden="true"></i> Vaccination  Appointment Calendar</button></a>
+
+</ul>
+</div>
+
+
+
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+
+<style>
+
+
+.support_css{
+//border-radius:25%;min-width:25vw;background:#c1c1c1; border-bottom: 2px dashed purple;
+}
+
+.support_css:hover{
+background:white;color:black;
+}
+
+
+
+.senddata1_css{
+background:#8B008B;
+color:white;
+cursor:pointer;
+border:none;
+padding:2px;
+border-radius:20%;
+text-align:center
+
+}
+
+
+.senddata1_css:hover{
+background:orange;color:white;
+
+}
+
+.chat_count { color: #FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: #34BB0C; padding: 2px 6px;font-size:14px; }
+.chat_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:14px; }
+
+
+</style>
+
+
+
+<!--load A ends here-->
+
+
+<br><br>
+
+
+
+
+
+
+
+<!--start right column all-->
+    <div class="right-column-all_NO>
+
+
+
+
+<style>
+.post_padding{
+padding-top:-70px;
+   
+}
+
+.post_bgcolor{
+background: #dddddd;
+   
+}
+
+
+@media screen and (max-width: 600px) {
+  .post_padding{
+  padding-top:1px; 
+ margin-top:-170px
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .post_padding{
+ padding-top:1px;
+ margin-top:-170px
+  }
+}
+
+
+.postbtn_dashedline{
+  border-bottom: 2px dashed #ec5574;
+
+}
+
+
+
+/* restrict responsive image to max size of 400px */
+.responsive_image1 {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.responsive_image2{
+  width: 100%;
+  height: auto;
+}
+
+.responsive_video {
+  width: 100%;
+height: 400px;
+  max-width: 500px;
+  max-height: 600px;
+  //height: auto;
+}
+
+
+</style>
+<!-- all post Section start -->
+<div  class="post_padding section_padding post_bgcolor">
+
+
+<!--start blog post row-->
+ <div class="row">
+
+
+
+<style>
+.c_counter {
+ padding:10px;
+color:white;
+background:purple;
+border:none;
+cursor:pointer;
+}
+
+.c_counter:hover {
+color:white;
+background:black;
+}
+
+.social_all{
+ padding:6px;
+color:white;
+background:red;
+border:none;
+cursor:pointer;
+border-radius:15%;
+
+}
+
+.s_icon {
+color:white;
+//background:black;
+font-size:20px;
+//border-radius:50%;
+cursor:pointer;
+}
+
+
+.s_icon:hover {
+color:white;
+background:red;
+}
+
+
+</style>
+
+
+
+
+
+</div>
+<!--end blog post row-->
+
+
+<!--start form post row-->
+<div class="row">
+<br>
+<marquee><b style='font-family:comic sans ms;color:#0088cc;font-size:16px;'>(Your Username: <span class='myd_username_sess'></span>)</b></marquee>
+
+
+<!--post start-->
+<div class="blog_post_form col-sm-12 alerts alert-warning hide_this_form_on_submit_post" id="blog_tab1">
+
+<!--form 1 starts-->
+<div style="text-align:left;font-size:14px;font-family:verdana;color:black">
+
+
+<style>
+.map_css{
+background: #8B008B;
+color:white;
+padding:4px;
+cursor:pointer;
+border:none;
+border-radius:10%;
+}
+
+.map_css:hover{
+background: black;
+color:white;
+
+}
+
+
+.map_css1{
+background: #ec5574;
+color:white;
+padding:6px;
+cursor:pointer;
+border:none;
+
+}
+
+
+.map_css1:hover{
+background: #800000;
+color:white;
+
+}
+
+
+
+
+
+.title_css{
+//background: green;
+color:#0088cc;
+cursor:pointer;
+font-size:24px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: #c1c1c1;
+color:black
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: #c1c1c1;
+color:black;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.cat_cssa{
+background: #ec5574;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.cat_cssa:hover{
+background: black;
+color:white;
+
+}
+
+
+
+</style>
+      
+</div>
+<!--form 1 ends-->
+
+
+</div>
+
+<!--post end-->
+
+
+</div>
+<!--end form post row-->
+
+
+
+
+
+
+
+
+
+<!-- Main Post Database query starts here -->
+
+
+
+
+
+<!--start loading post-->
+
+<script>
+
+$(document).ready(function(){
+var tt=1;
+$("#loader-dashboard_post").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait,Loading post...</div>');
+var datasend = {tt:tt};
+
+
+	
+		$.ajax({
+			
+			type:'POST',
+			url:url_post_data+'dashboard_post_load.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+$("#loader-dashboard_post").hide();
+$("#result-dashboard_post").html(msg);
+//setTimeout(function(){ $('#result-dashboard_post').html(''); }, 5000);				
+	
+}
+			
+		});
+		
+		
+
+});
+
+
+</script>
+<br>
+<div id="loader-dashboard_post"></div>
+<div id="result-dashboard_post"></div>
+
+
+
+<!--End loading posts-->
+
+
+
+
+<!-- Main Post Database query ends here-->
+
+
+
+
+
+</div>
+<!--all post section ends-->
+
+
+
+
+
+
+
+<!-- footer Section start -->
+
+<footer class=" navbar_footer text-center footer_bgcolor">
+
+<div class="row">
+        <div class="col-sm-12">
+
+
+
+<p class="footer_text1"><span class='myd_title_header'></span></p>
+<p class="footer_text2"><span class='myd_title_footer'></span></p>
+<br>
+
+        </div>
+
+
+
+        </div>
+
+<br/>
+  <p></p>
+</footer>
+
+<!-- footer Section ends -->
+	
+
+
+
+
+<div>
+  <!--end right column all-->    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- search data modal starts here -->
+
+
+<div class="container_search_post_modal">
+
+  <div class="modal fade " id="myModal_search_post" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 pull-right1 modaling_sizing1">
+      <div class="modal-content">
+        <div class="modal-header" style="color:black;background:#c1c1c1">
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+      <h4 class="modal-title">Covid19 Vaccination Center Search Engine</h4>
+        </div>
+        <div class="modal-body">
+
+<h4>Search Covid19 Vaccination Center Locations by Addresses Eg.<b>76 Wilford Street, Newtown, NSW</b> etc.</h4><br>
+
+
+<div style='background:#ddd;color:black;padding:10px;border-style: dashed; border-width:2px; border-color: orange;'>
+
+<!--form START-->
+
+
+
+        <script>
+
+
+
+// start searching
+$(document).ready(function(){
+    $('.search_m_btn').keyup(function(){ 
+     
+
+var search_data_m = $(this).val();
+//var search_data_m = $('#search_data').val();
+
+
+ if(search_data_m.length < 2) {
+// ensure that user must type something first at least 2 characters before fetching database records
+return false;
+}
+       var token = 101201;
+$('#loader_search_m').fadeIn(400).html('<div style="background:orange;color:black;padding:10px;">Please Waiting Searching Data... <i class="fa fa-spinner fa-spin" style="font-size:20px"></i> </div>');
+
+ var ShowResult = $('#search_text');
+           var datasend = "search_data_m="+ search_data_m + "&token=" + token;
+            $.ajax({
+            type : 'POST',
+            data : datasend,
+            url  : url_post_data+'search_new.php',
+            success: function(data){
+ShowResult.html('<br><span id="alertdata" class="well alert alert-success"><font color=green>Your Searched Text <b>('+search_data_m+')</b> </font></span>');
+  
+
+                                $("#result_search_m").html(data);
+				//$('#alerts_search_m').delay(5000).fadeOut('slow');
+                                $('#loader_search_m').hide();
+
+
+
+            }
+
+            });
+    });
+});
+
+// end searching
+
+
+
+
+        </script>
+
+
+
+
+
+
+<style>
+
+
+.search_m_btn{
+width:100%;
+height:60px;
+border-radius:20%;
+
+}
+.searching_res{
+position:absolute;
+//position:fixed;
+z-index:999;
+}
+
+@media screen and (max-width: 600px) {
+  .searching_res{
+  //width: 56%;
+ //top: 2px; 
+ top: 20px; 
+margin-left:86px; 
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .searching_res{ 
+  //width: 56%;
+top:20px;
+margin-left:86px;
+  }
+}
+
+.searching_res_p{
+cursor: wait;
+padding: 20px;
+background: #8B008B;
+color: white;
+border-style: dashed; border-width:2px; border-color: orange;
+}
+.searching_res_p:hover{
+background: black;
+color: white;
+}
+
+
+.searching_res_p1{
+cursor: wait;
+padding: 20px;
+background: red;
+color: white;
+border-style: dashed; border-width:2px; border-color: orange;
+}
+.searching_res_p1:hover{
+background: black;
+color: white;
+}
+
+</style>
+
+<input type="text" class="search_m_btn" name="search_data_m" id="search_data_m" placeholder="Search Composts by Location Address." />
+
+<div id="loader_search_m"></div>
+
+<div id="search_text"></div>
+<div id="result_search_m" class='searching_res_m'></div>
+
+
+
+<br><br>
+
+
+</div><br><br>
+
+<br><br>
+
+<!--form ENDS-->
+
+
+        </div>
+        <div class="modal-footer" style="color:black;background:#c1c1c1">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--  search data modal ends here -->
+
+
+
+
+
+
+
+
+
+
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

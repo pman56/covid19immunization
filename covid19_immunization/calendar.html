@@ -1,0 +1,326 @@
+<!DOCTYPE html >
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title></title>
+    <style>
+    
+      #map {
+        height: 80%;
+      }
+    
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
+
+<script src="moment.js"></script>
+	<script src="livestamp.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+
+var userid_sess_data1 = localStorage.getItem('useridsessdata2');
+
+//alert(userid_sess_data1);
+
+if (userid_sess_data1 == null || userid_sess_data1 == undefined) {
+
+  alert('hello!. You Must Login To Access this Page');
+window.location='login.html';
+//return false;
+}
+
+
+</script>
+
+
+
+
+
+<script>
+$(document).ready(function(){
+var userid_sess_data = localStorage.getItem('useridsessdata2');
+var fullname_sess_data = localStorage.getItem('fullnamesessdata2');
+var username_sess_data = localStorage.getItem('usernamesessdata2');
+var email_sess_data = localStorage.getItem('emailsessdata2');
+var photo_sess_data = localStorage.getItem('photosessdata2');
+var points_sess_data = localStorage.getItem('pointssessdata2');
+var levels_sess_data = localStorage.getItem('levelssessdata2');
+
+
+
+var title_header = localStorage.getItem('titleheader2');
+var title_footer = localStorage.getItem('titlefooter2');
+var appcolor = localStorage.getItem('appcolor2');
+
+//alert(fullname_sess_data);
+
+
+var rec = "<span>" +
+"<img src=" + photo_sess_data +"  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: orange;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+$('.myd_fullname_sess').html(fullname_sess_data);
+$('.myd_userid_sess').html(userid_sess_data);
+$('.myd_username_sess').html(username_sess_data);
+
+
+//$('#myd_userid_sess_value').val(userid_sess_data).value;
+//$('#myd_userid_sess_id').html(userid_sess_data);
+
+
+$('.myd_title_header').html(title_header);
+$('.myd_title_footer').html(title_footer);
+
+
+});
+
+</script>
+
+
+<style>
+
+
+
+
+
+
+<style>
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#8B008B;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #ec5574;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+.res_center_css{
+position:absolute;top:50%;left:50%;margin-top: -50px;margin-left -50px;width:100px;height:100px;
+}
+
+
+</style>
+
+<html>
+  <body>
+
+<!-- start column nav-->
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+
+             <li class="navgate"> <span class='myd_photo_sess'></span>
+<span class='myd_fullname_sess'></span></li>
+        
+<li class="navgate"><a  href="dashboard_welcome2.html" class='img-circle' style="border-style: solid; border-width:4px; border-color:orange;color:white;font-size:14px;">Dashboard</a></li>
+ 
+        <li class="navgate"><a  href="logout.html" style="color:white;font-size:14px;">logout</a></li>
+      </ul>
+
+
+
+
+    </div>
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+<script type="text/javascript">
+
+//$.noConflict();
+		$(document).ready(function(){
+              // $.noConflict(true);
+			callCalendar('calendar.php?uid=quickbase');
+
+			$('body').delegate('.cal-search', 'click', function(e){
+				e.preventDefault();
+				callCalendar($(this).attr('href'));
+			});
+		});
+		function callCalendar(url1a) {
+$('#loader_r1').fadeIn(400).html('<div style="background:#ddd;color:black;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp; &nbsp;Please Wait, Calendar is being Updated</div>');
+
+			$.get(url1a,function(data){
+ $('#loader_r1').hide();
+
+				$('.calendar').html(data);
+			});
+}
+
+
+
+
+
+
+// refresh calendar
+
+
+$(document).ready(function(){
+$('#refresh').click(function(){
+              // $.noConflict(true);
+
+			callCalendar('calendar.php?uid=quickbase');
+			$('body').delegate('.cal-search', 'click', function(e){
+				e.preventDefault();
+				callCalendar($(this).attr('href'));
+			});
+		});
+});
+		function callCalendar(url1b) {
+
+		$('#loader_r1').fadeIn(400).html('<div style="background:#ddd;color:black;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp; &nbsp;Please Wait, Calendar is being Updated</div>');
+
+			$.get(url1b,function(data){
+ $('#loader_r1').hide();
+				$('.calendar').html(data);
+			});
+
+
+}
+
+
+	</script>
+
+
+
+
+
+
+
+
+ <br><br><br>
+	<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+<center><h3>Covid19 Vaccination Bookers Appointment Calendar</h3></center>
+<div id="loader_r1" class='res_center_css'></div>
+		<div style="color:black" class="panel panel-default calendar">
+			
+			</div>	
+	
+	</div>
+	</div> 
+   
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+

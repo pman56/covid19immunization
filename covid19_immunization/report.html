@@ -1,0 +1,1050 @@
+﻿
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <title>Welcome </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="landing page, website design" />
+
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+var userid_sess_data1 = localStorage.getItem('useridsessdata2');
+
+if (userid_sess_data1 == null || userid_sess_data1 == undefined) {
+
+  alert('Hello!. You Must Login To Access this Page');
+window.location='login.html';
+//return false;
+}
+
+
+</script>
+
+
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+
+<style>
+	
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#8B008B;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #0088cc;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+
+
+/* home starts */
+  
+.home_image {	
+width:100%;
+/*
+height:500px;
+max-height:500px;
+*/
+height:100vh;
+max-height:100vh;
+       
+        
+}
+
+.home_content_head {
+        color: white;
+        font-size:40px;
+        font-weight:bold;
+	font-family:comic sans ms; 
+width:40vw;
+margin-left:-110px;
+  
+}
+
+.home_content_text {
+        color: white;
+        font-size:20px;
+        font-weight:bold;
+	box-sizing: border-box;
+      //position: relative;
+        
+}
+
+.home{
+background:#0088cc;
+}
+
+.home:hover{
+box-shadow: inset 0 0 0 25px #8B008B;
+}
+
+
+.home_text_transparent_home {
+border-style: solid; border-width:1px; border-color: orange;
+  width: 100%;
+  padding: 90px;
+  position: absolute;
+  bottom: 0px;
+  background: rgba( 0, 0, 0, 0.50);
+
+  color: white;
+  height:100%;
+text-align: center;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .home_text_transparent_home{
+
+  width: 100%;
+  padding: 20px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .home_content_home{
+  width: 100%;
+  padding: 20px  
+  }
+}
+
+
+
+.creator_imagelogo_data{
+ width:60px;
+ height:60px;
+}
+
+/* make modal appear at center of the page */
+.modal-appear-center {
+margin-top: 25%;
+//width:40%;
+}
+
+
+/* make modal appear at center of the page */
+.modal-appear-center1 {
+margin-top: 15%;
+//width:40%;
+}
+
+
+.modal_head_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+
+.modal_footer_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+/*
+modal_mobile_resize 
+
+@media screen and (max-width: 600px) {
+  .modal_mobile_resize {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+
+*/
+
+.btn_copyright{
+//background: orange;
+color:orange;
+//padding:2px;
+font-weight:200;
+}
+
+
+.btn_copyright:hover {
+background: black;
+color:pink;
+font-weight:700;
+}
+
+
+
+.contact_name_color{
+color: #0088cc;
+font-weight:200px;
+}
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color:#8B008B;
+    color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+
+}
+
+
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+}
+
+.modaling_sizing{
+width:59%;
+}
+
+
+@media screen and (max-width: 768px) {
+.modaling_sizing {
+width:99%;
+
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+.modaling_sizing {
+width:99%;
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center; 
+}
+
+
+
+}
+
+.category_post{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+
+
+.e_search_form{
+width: 38vw;
+height:60px;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:15%;
+color:black;
+font-size:16px;
+background:white;
+
+//transform: skew(-22deg);
+margin-left:-90px;
+
+}
+
+
+
+.readmore_btn{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 50%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.readmore_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+</style>
+
+
+
+
+<script>
+$(document).ready(function(){
+var userid_sess_data = localStorage.getItem('useridsessdata2');
+var fullname_sess_data = localStorage.getItem('fullnamesessdata2');
+var username_sess_data = localStorage.getItem('usernamesessdata2');
+var email_sess_data = localStorage.getItem('emailsessdata2');
+var photo_sess_data = localStorage.getItem('photosessdata2');
+var points_sess_data = localStorage.getItem('pointssessdata2');
+var levels_sess_data = localStorage.getItem('levelssessdata2');
+
+
+
+var title_header = localStorage.getItem('titleheader2');
+var title_footer = localStorage.getItem('titlefooter2');
+var appcolor = localStorage.getItem('appcolor2');
+
+
+//alert(fullname_sess_data);
+
+
+var rec = "<span>" +
+"<img src=" + photo_sess_data +"  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: orange;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+$('.myd_fullname_sess').html(fullname_sess_data);
+$('.myd_userid_sess').html(userid_sess_data);
+$('.myd_username_sess').html(username_sess_data);
+
+
+//$('#myd_userid_sess_value').val(userid_sess_data).value;
+//$('#myd_userid_sess_id').html(userid_sess_data);
+
+
+$('.myd_title_header').html(title_header);
+$('.myd_title_footer').html(title_footer);
+
+
+});
+
+</script>
+
+
+
+    </head>
+    <body>
+
+ 
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- start column nav-->
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+             
+ <li style='display:none;' class="navgate"><a title='Create New Post' href="create_post.html" style="color:white;font-size:14px;">Create New Posts</a></li>       
+<li class="navgate"><a title='View Dashboard' href="dashboard_welcome2.html" class='img-circle' style="border-style: solid; border-width:4px; border-color:orange;color:white;font-size:14px;">Dashboard</a></li>
+
+
+<li class="navgate">
+<span class='myd_photo_sess'></span>
+
+
+
+<span class="dropdown">
+  <a style="color:white;font-size:14px;cursor:pointer;" title='View More Data' class="btn1 btn-default1 dropdown-toggle"  data-toggle="dropdown"><span class='myd_fullname_sess'></span>
+  <span class="caret"></span></a>
+
+<ul class="dropdown-menu col-sm-12">
+<li><a title='My Profile' href="profile_base2.html">My Profile</a></li>
+<li><a title='Logout' href="logout.html">Logout</a></li>
+
+</ul></span>
+
+</li>
+
+
+
+      </ul>
+
+
+
+    </div>
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--start right column all-->
+    <div class="right-column-all">
+
+
+
+
+
+<style>
+
+
+.post_padding{
+padding-top:70px;
+   
+}
+
+.post_bgcolor{
+background: #dddddd;
+   
+}
+
+
+@media screen and (max-width: 600px) {
+  .post_padding{
+  padding-top:1px; 
+ margin-top:-170px
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .post_padding{
+ padding-top:1px;
+ margin-top:-170px
+  }
+}
+
+
+.postbtn_dashedline{
+  border-bottom: 2px dashed #8B008B;
+
+}
+
+.composite_css{
+font-size:16px;color:black;background:#c1c1c1;padding:10px;border-radius:15%;
+}
+
+.composite_css:hover{
+background:orange;
+color:black;
+
+}
+
+
+</style>
+<!-- all post Section start -->
+<div  class="post_padding section_padding post_bgcolor">
+
+
+<!--start blog post row-->
+ <div class="row">
+
+
+
+
+<div class='col-sm-2'></div>
+
+<div class='col-sm-8' style="font-size:24px;color:black;background:#c1c1c1;padding:10px;border-radius:15%;" >
+<center><i  style="color:black;font-size:30px;" class="fa fa-edit" aria-hidden="true"></i>Covid19 Vaccine Side Effects Reporting System</center></div>
+
+<div class='col-sm-2'></div>
+
+<div class='col-sm-12'></div>
+
+
+<br>
+<br>
+<br>
+
+
+
+
+<!--create course form START here-->
+
+
+<div style="border-style: dashed; border-width:2px; border-color: orange;background:#eeeeee;padding:10px;" class="row">
+
+
+
+<!--start row-->
+
+        
+<div class='row'>
+
+
+<div class='col-sm-3'></div>
+
+
+<div class='col-sm-6' style='background:#ddd;'>
+<!--start form-->
+
+<script>
+
+$(document).ready(function(){
+$('#post_btn').click(function(){
+
+
+//post div content
+
+//var content = $('#msg_result').text();
+//var content = $('#msg_result').html();
+
+
+var userid_sess_data = localStorage.getItem('useridsessdata2');
+var fullname_sess_data = localStorage.getItem('fullnamesessdata2');
+var username_sess_data = localStorage.getItem('usernamesessdata2');
+var points_sess_data = localStorage.getItem('pointssessdata2');
+var photo_sess_data = localStorage.getItem('photosessdata2');
+		
+var title = $('#title').val();
+var vaccine_name = $('#vaccine_name').val();
+var messaging = $("#messaging").val();
+
+
+if(title==""){
+alert('Post/Reports Title cannot be Empty');
+return false;
+}
+
+
+if(vaccine_name==""){
+alert('Please Enter Vaccine Name');
+}
+
+if(messaging==""){
+alert('Additional Message/Description cannot be Empty');
+return false;
+}
+
+
+
+
+else{
+$('#loader_l2').fadeIn(400).html('<br><div style="color:black;background:#c1c1c1;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:24px"></i>  &nbsp;Please Wait, Reports is being sent...</div>');
+var datasend = "vaccine_name="+ vaccine_name+'&title='+title+'&messaging='+messaging+'&userid_sess_data='+userid_sess_data+'&fullname_sess_data='+fullname_sess_data+'&photo_sess_data='+photo_sess_data+'&points_sess_data='+points_sess_data;
+		
+		$.ajax({
+			
+			type:'POST',
+			url:'reports_posts.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+
+
+
+
+
+
+
+if(msg == 1){
+alert('Reports Successfully Sent..');			
+$('#loader_l2').hide();
+$('#result_l2').html("<div style='color:white;background:green;padding:10px;'>Reports  Successfully Sent</div>");
+setTimeout(function(){ $('#result_l2').html(''); }, 5000);
+
+
+$('#title').val('');
+$('#vaccine_name').val('');
+$("#messaging").val('');
+
+
+//window.location='report.html';
+location.reload();
+			
+}
+else if(msg == 4){
+alert('Data could not be sent. Ensure there is network. and try again.');
+$('#loader_l2').hide();
+$('#result_l2').html("<div style='color:white;background:green;padding:10px;'>Data could not be sent. Ensure there is network. and try again.</div>");
+}
+
+
+
+
+else{
+
+alert('Error: Encountered Processing your Reports');			
+$('#loader_l2').hide();
+$('#result_l2').html("<div style='color:white;background:red;padding:10px;'>Error: Encountered Processing your Reports</div>");
+setTimeout(function(){ $('#result_l2').html(''); }, 5000);				
+	
+
+}
+
+
+
+
+			
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+
+
+</script>
+
+
+
+<div class="col-sm-12 form-group">
+<label>Reports Title </label>
+<input  class="form-control contact_input_color" id="title" name="title" placeholder="Post Reports Title" type="text" required>
+</div>
+
+
+
+<div class="col-sm-12 form-group">
+<label>Vaccine Name  (Eg: Moderna Vaccine, Gilead Vaccine etc.)</label>
+<input  class="form-control contact_input_color" id="vaccine_name" name="vaccine_name" placeholder="Vaccine Name" type="text" required>
+</div>
+
+
+
+
+<div class="col-sm-12 form-group">
+<label>Additional Message/Descriptions </label><span style='color:purple;'>(State How You feel after being Vaccinated. Do you have any symptoms, list them also)</span>
+<textarea  class="desc form-control contact_input_color" id="messaging"  name="messaging" placeholder="Provide Additional Message/Descriptions"  required></textarea>
+</div>
+
+
+<div class=" form-group">
+<div style='padding:10px;color:black;background:white;' id='msg_result' class='msg_result'></div>
+</div>
+<br>
+
+
+
+
+
+<div class="col-sm-12 form-group">
+                        <div id="loader_l2"></div>
+                        <div id="result_l2"></div>
+</div>
+
+
+<button type="button" id="post_btn" class="category_post"  /> Publish Now</button>
+</div>
+
+
+
+<!--end form-->
+
+</div>
+
+
+
+<div class='col-sm-3'></div>
+
+</div>
+
+<!--end row-->
+
+
+</div>
+
+
+
+
+
+<!--create -->
+
+
+
+
+
+<!--start loading post-->
+
+
+<style>
+
+
+
+.title_css{
+//background: green;
+color:#0088cc;
+cursor:pointer;
+font-size:20px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: #c1c1c1;
+color:black
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: #c1c1c1;
+color:black;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.cat_cssa{
+background: #ec5574;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.cat_cssa:hover{
+background: black;
+color:white;
+
+}
+
+
+
+</style>
+
+<script>
+
+$(document).ready(function(){
+var tt=1;
+$("#loader-dashboard_post").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait,Loading Vaccination Reports...</div>');
+var datasend = {tt:tt};
+
+
+	
+		$.ajax({
+			
+			type:'POST',
+			url:'dashboard_post_load_report.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+$("#loader-dashboard_post").hide();
+$("#result-dashboard_post").html(msg);
+//setTimeout(function(){ $('#result-dashboard_post').html(''); }, 5000);				
+	
+}
+			
+		});
+		
+		
+
+});
+
+
+</script>
+<br>
+<div id="loader-dashboard_post"></div>
+<div id="result-dashboard_post"></div>
+
+
+
+<!--End loading posts-->
+
+
+
+
+
+
+
+
+</div>
+<!--end blog post row-->
+</div>
+<!--all post section ends-->
+
+
+
+
+
+
+
+
+
+<!-- footer Section start -->
+
+<footer class=" navbar_footer text-center footer_bgcolor">
+
+<div class="row">
+        <div class="col-sm-12">
+
+<p class="footer_text1"><span class='myd_title_header'></span></p>
+<p class="footer_text2"><span class='myd_title_footer'></span></p>
+
+        </div>
+
+
+
+        </div>
+
+<br/>
+  <p></p>
+</footer>
+
+<!-- footer Section ends -->
+	
+
+
+
+
+<div>
+  <!--end right column all-->    
+
+
+
+
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
